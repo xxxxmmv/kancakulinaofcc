@@ -1,0 +1,583 @@
+/* =====================
+   VARIABLES & COLORS
+   ===================== */
+:root {
+    --primary-color: #A0713C;
+    --secondary-color: #D4A574;
+    --accent-color: #E8D4C0;
+    --text-color: #5D4037;
+    --light-bg: #F5F0EB;
+    --white: #FFFFFF;
+    --brown-dark: #6D4C41;
+    --orange-warm: #E8754F;
+    --gold-accent: #D4A76A;
+    --shadow: 0 4px 12px rgba(160, 113, 60, 0.12);
+    --transition: all 0.3s ease;
+}
+
+/* =====================
+   RESET & BASE STYLES
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =====================
+   TYPOGRAPHY
+   ===================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+/* =====================
+   HEADER & NAVIGATION
+   ===================== */
+.header {
+    background: linear-gradient(135deg, rgba(160, 113, 60, 0.98), rgba(212, 165, 116, 0.95));
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--white);
+    letter-spacing: 2px;
+    flex: 1;
+    text-align: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* =====================
+   HERO SECTION
+   ===================== */
+.hero {
+    min-height: 500px;
+    background: linear-gradient(135deg, #C4874A 0%, #D4A574 50%, #E8B883 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+.hero-frame {
+    position: relative;
+    background: var(--white);
+    border: 3px solid var(--secondary-color);
+    border-radius: 30px;
+    padding: 60px 40px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hero-decorative-flower {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+}
+
+.hero-flower-1 {
+    top: 20px;
+    left: 20px;
+}
+
+.hero-flower-2 {
+    top: 20px;
+    right: 20px;
+}
+
+.hero-flower-3 {
+    bottom: 20px;
+    right: 20px;
+}
+
+.hero-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 48px;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* =====================
+   ABOUT SECTION
+   ===================== */
+.about {
+    background: linear-gradient(135deg, #FBF8F3 0%, #F5EFE6 100%);
+    padding: 80px 20px;
+}
+
+.about-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.home-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.about-quote {
+    font-family: 'Crimson Text', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: var(--primary-color);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.philosophy-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.philosophy-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.javanese-text {
+    font-size: 24px;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+.javanese-translation {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.philosophy-explanation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.philosophy-explanation p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+/* =====================
+   KOLEKSI/PRODUCTS SECTION
+   ===================== */
+.koleksi {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #FBF8F3 0%, #F5EFE6 100%);
+}
+
+.section-title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(160, 113, 60, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: var(--accent-color);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.product-name {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.product-dish {
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.product-description {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.product-description p {
+    margin: 0;
+}
+
+.product-meaning {
+    border-top: 1px solid var(--accent-color);
+    padding-top: 15px;
+    font-size: 13px;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.product-meaning p {
+    margin: 0;
+}
+
+/* =====================
+   PESAN SECTION
+   ===================== */
+.pesan {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #D4A76A 0%, #E8B883 50%, #F0C898 100%);
+    text-align: center;
+    color: var(--white);
+}
+
+.pesan .section-title {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.pesan-subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: var(--accent-color);
+}
+
+.pesan-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.pesan-button {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 16px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.pesan-button:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+.footer {
+    background: #6D4C41;
+    color: var(--white);
+    padding: 60px 20px 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-brand h3 {
+    font-family: 'Crimson Text', serif;
+    font-size: 28px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+.footer-social h4 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+    font-size: 14px;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+   ===================== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand-title {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .nav-menu {
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .hero-frame {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .about-quote {
+        font-size: 22px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .pesan-button {
+        padding: 14px 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand-title {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .about-quote {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .product-name {
+        font-size: 20px;
+    }
+
+    .detail-card {
+        padding: 20px;
+    }
+
+    .footer-content {
+        margin-bottom: 20px;
+    }
+}
